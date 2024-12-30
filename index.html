@@ -10,6 +10,41 @@
     </head>
     
     <body>
+        <!-- Menu de navigation -->
+        <nav>
+            
+            <div class="nav-container">
+
+                <div class="icon">
+                    <span> Moi </span> 
+                </div>
+
+                <!-- Liens de navigation vers les differenets pages  -->
+                <div class="lien">
+                    <div class="lien"><a href="#">Acceuil</a></div> 
+                    <div class="lien"><a href="#">CV</a></div> 
+                    <div class="lien"><a href="#">projet</a></div> 
+                    <div class="lien"><a href="#">contact</a></div> 
+                </div>
+
+                <!-- Icône hamburger (menu mobile) -->
+                <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i> 
+                <!-- Menu déroulant qui apparaît lors du clic sur l'icône hamburger -->
+                <div class="Menu-deroulant">
+                    <div class="lien">
+                        <a href="#">Acceuil</a> 
+                        <a href="#">CV</a> 
+                        <a href="#">projet</a> 
+                        <a href="#">contact</a> 
+                        <!-- Icône de fermeture du menu  -->
+                        <i class="fa-solid fa-xmark cancel" onclick="ferme()"></i> 
+                    </div>
+                </div>
+            
+            </div>
+        
+        </nav>
+
         
         <script src="js/script.js"></script>
     
