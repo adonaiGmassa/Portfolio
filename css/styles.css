@@ -44,3 +44,20 @@ icon{
     display: none;
     font-size: clamp(2rem,0.5rem+5vw ,3rem);
 }
+.nav-container .lien{
+    display: flex;
+}
+.nav-container .lien a{
+    font-size: 1.2rem;
+    font-weight: 550 ;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    transition: 0.3 linear;
+
+
+}
+.nav-container .lien a:hover{
+    color: rgb(211, 3, 3);
+    text-shadow: 2px solid rgb(211, 3, 3);
+}
