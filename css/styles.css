@@ -34,3 +34,13 @@ icon{
     color: rgb(211, 3, 3);
     text-shadow: 0 0 10px rgb(211, 3, 3);
 }
+.hamburg,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15;
+    top: 10;
+    color: white;
+    display: none;
+    font-size: clamp(2rem,0.5rem+5vw ,3rem);
+}
