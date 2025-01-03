@@ -104,5 +104,21 @@ icon{
     width: 100% ;
 }
 .main-container .image img:hover{
-    animation:  animate 3s ease-in-out infinite  ;
+    animation:  animate 1.5s ease-in-out infinite  ;
+}
+@keyframes animate {
+    /* A 0% de l'animation (au début), l'élément a une échelle de 1 (taille normale) */
+    0% {
+        transform: scale(1);
+    }
+
+    /* A 50% de l'animation (au milieu), l'élément a une échelle de 1.05 (5% plus grand) */
+    50% {
+        transform: scale(1.05);
+    }
+
+    /* A 100% de l'animation (à la fin), l'élément revient à sa taille normale (échelle 1) */
+    100% {
+        transform: scale(1);
+    }
 }
