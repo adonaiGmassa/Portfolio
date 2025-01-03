@@ -92,6 +92,32 @@ icon{
     justify-content: space-evenly ;
     align-items: center ;
 }
+.content{
+    color:white ;
+    width: 40%;
+    min-height: 100px ;
+}
+.content h1{
+    font-size:clamp(1rem,1rem+5vw,1.8rem) ;
+}
+.content h1 span{
+    font-weight: 700;
+    text-shadow: 0 0 10px rgb(200, 7, 7);
+    color: rgb(200, 7, 7);
+}
+.content .typewriter{
+    font-size:clamp(1rem,1rem+5vw,1.8rem) ;
+    font-weight: 700;
+}
+.typewriter span{
+    color: rgb(200, 7, 7) ;
+    text-shadow: 0 0 10px rgb(200, 7, 7);
+}
+.content p{
+    font-size:clamp(0.4rem,0.2rem+9vw,1rem) ;
+    margin: 10px 0 ;
+}
+
 .main-container .image{
     width: 500px ;
     height:80vh ;
