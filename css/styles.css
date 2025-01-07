@@ -229,3 +229,33 @@ nav {
         transform: scale(1);
     }
 }
+@media (max-width:884px) {
+    nav .logo{
+        position: absolute;
+        top: 16;
+        left: 15;
+        font-size: 1.5rem;
+    }
+    .main-container{
+        display: flex;
+        flex-direction:column-reverse ;
+    }
+    .nav-container .lien{
+        display: none;
+    }
+    .hamburg{
+        display: block;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .main-container .image{
+        width: 50% ;
+        height: 60% ;
+    }
+    .reseau-sociaux  i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem ;
+    }
+}
