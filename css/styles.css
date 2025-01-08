@@ -155,25 +155,21 @@ nav {
 /* Boutons pour les réseaux sociaux */
 .reseau-sociaux {
     color: var(--blue-color);
-    width: 3rem;
-    height: 3rem;
     margin: 0 15px;
-    border: 0.2em solid var(--blue-color);
-    border-radius: 50%;
     display: inline-flex;
+    gap: 10px;
     transition: transform 0.2s linear, filter 0.2s linear;
     font-size: 1.5rem;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
 }
 
 .reseau-sociaux i:hover {
     transform: scale(1.3);
     filter: drop-shadow(0 0 10px var(--blue-color));
-    color: var(--black-color);
-    background-color: var(--blue-color);
+    color: var(--white-color);
 }
+
 
 /* Style des boutons dans le contenu */
 .content button {
