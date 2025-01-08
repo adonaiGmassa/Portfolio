@@ -188,7 +188,7 @@ nav {
 
 .content button:hover {
     transform: scale(1.1);
-    color: var(--black-color);
+    color: var(--white-color);
     border: 2px solid rgb(0, 0, 220);
     background-color: transparent;
     font-weight: 700;
