@@ -24,4 +24,15 @@ function typeWriter(){
         setTimeout(eraseText,1000)
     }
 }
-function eraseText(){}
+function eraseText(){
+    if(txtElement.innerHTML.length){
+        txtElement.innerHTML = txtElement.innerHTML.slice
+        indexLettre++
+        setTimeout(eraseText,50)
+    }
+    else{
+        txtIndex = (txtIndex + 1) % txtsTypewrite.length
+        indexLettre = 0
+        setTimeout(typeWriter,500)
+    }
+}
