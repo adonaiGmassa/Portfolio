@@ -1,27 +1,31 @@
 //By Radcircles
-const txtsTypewrite=[]
-const txtElement=document.querySelector(".typewriter-text")
-let vitesse= 100;
+
+const txtsTypewrite=[
+    " etudiant ",
+    " jeune developpeur"]
+const txtElement = document.querySelector(".typewriter-text")
+let vitesse = 100;
 let txtIndex = 0
 let indexLettre = 0
 
 function hamburg(){
-    const NAVBAR = document.querySelector(".Menu-deroulant")
-    NAVBAR.style.transform = "translateY(0px)";  
+    const NAVBAR = document.querySelector(".Menu-deroulant");
+    NAVBAR.style.transform = "translateY(0px)";
 }
 
 function ferme(){
-    const NAVBAR = document.querySelector(".Menu-deroulant")
-    NAVBAR.style.transform = "translateY(-500px)"
+    const NAVBAR = document.querySelector(".Menu-deroulant");
+    NAVBAR.style.transform = "translateY(-500px)";
 }
+
+// Fonction pour l'effet Typewriter
 function typeWriter(){
-    if(indexLettre < txtsTypewrite[txtIndex].length){
-        txtElement.innerHTML += txtsTypewrite[txtIndex].charAt(indexLettre)
-        indexLettre++
-        setTimeout(typeWriter,vitesse)
-    }
-    else{
-        setTimeout(eraseText,1000)// Attente de 1 seconde avant de commencer à effacer
+    if (indexLettre < txtsTypewrite[txtIndex].length){
+        txtElement.innerHTML += txtsTypewrite[txtIndex].charAt(indexLettre);
+        indexLettre++;
+        setTimeout(typeWriter, vitesse);
+    } else {
+        setTimeout(eraseText, 1000); // Attente de 1 seconde avant de commencer à effacer
     }
 }
 
@@ -39,3 +43,6 @@ function eraseText() {
         setTimeout(typeWriter, 500); // Attendre 0.5 seconde avant de commencer à écrire le prochain texte
     }
 }
+
+// Démarrer l'animation de typewriter lorsque la page est chargée
+window.onload = () => { typeWriter(); } ;
