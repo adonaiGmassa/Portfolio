@@ -1,0 +1,50 @@
+<!--By Radcircles-->>
+<!DOCTYPE html>
+<html lang="fr">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <title>Portfolio</title>
+    </head>
+    <body>
+        <!-- Menu de navigation -->
+        <nav>
+            
+            <div class="nav-container">
+
+                <div class="icon">
+                    <span> Massa Adonaï </span> 
+                </div>
+
+                <!-- Liens de navigation vers les differenets pages  -->
+                <div class="lien">
+                    <div class="lien"><a href="index.html">Acceuil</a></div> 
+                    <div class="lien"><a href="page/aPropos.html">A Propos</a></div> 
+                    <div class="lien"><a href="page/projet.html">Projet</a></div> 
+                    <div class="lien"><a href="page/contact.html">Contact</a></div> 
+                </div>
+
+                <!-- Icône hamburger (menu mobile) -->
+                <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i> 
+                <!-- Menu déroulant qui apparaît lors du clic sur l'icône hamburger -->
+                <div class="Menu-deroulant">
+                    <div class="lien">
+                        <a href="index.html">Acceuil</a> 
+                        <a href="page/aPropos.html">A propos</a> 
+                        <a href="page/projet.html">Projet</a> 
+                        <a href="page/contact.html">Contact</a> 
+                        <!-- Icône de fermeture du menu  -->
+                        <i class="fa-solid fa-xmark cancel" onclick="ferme()"></i> 
+                    </div>
+                </div>
+            
+            </div>
+        
+        </nav>
+        <script src="js/script.js"></script>
+    
+    </body>
+</html>
