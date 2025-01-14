@@ -1,17 +1,20 @@
 /* By Radcircles*/
-
 :root {
-    /* Déclaration des couleurs pour une gestion centralisée */
-    --blue-color: rgb(4, 7, 200);
-    --black-color: black;
-    --white-color: white;
+    /* Gestion centralisée des couleurs */
+    --main-color: #6c9eeb; /* Bleu doux */
+    --accent-color: #54b8b1; /* Vert mint pour les éléments interactifs */
+    --background-color: #121212; /* Gris très foncé */
+    --text-color: #e0e0e0; /* Gris clair pour le texte */
+    --card-background: #2a2a2a; /* Gris foncé pour les cartes */
+    --light-shadow: rgba(0, 0, 0, 0.2); /* Ombre légère */
+    --hover-shadow: rgba(0, 0, 0, 0.3); /* Ombre au survol */
 }
 
-/* Réinitialisation des marges, paddings et de la police pour tout le site */
+
 * {
     padding: 0;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
 
@@ -20,7 +23,8 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background-color: var(--black-color); /* Utilisation de la couleur définie dans :root */
+    background-color: var(--background-color); /* Fond gris foncé */
+    color: var(--text-color); /* Texte gris clair */
 }
 
 /* Style du nav qui reste sticky en haut */
@@ -28,8 +32,10 @@ nav {
     width: 100%;
     height: 10vh;
     position: sticky;
-    top: 0; /* Ajouté pour fixer le nav en haut */
+    top: 0;
     z-index: 100;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 5px var(--light-shadow); /* Ajout de l'ombre */
 }
 
 /* Conteneur des éléments du nav */
@@ -43,14 +49,14 @@ nav {
 
 /* Style pour les icônes dans le nav */
 .icon {
-    color: var(--white-color);
+    color: var(--text-color);
     font-size: 2rem;
     font-weight: bold;
 }
 
 .icon span {
-    color: var(--blue-color);
-    text-shadow: 0 0 10px var(--blue-color);
+    color: var(--main-color); 
+    text-shadow: 0 0 5px var(--main-color);
 }
 
 /* Hamburger menu et bouton cancel */
@@ -60,7 +66,7 @@ nav {
     position: absolute;
     right: 15px;
     top: 10px;
-    color: var(--white-color);
+    color: var(--text-color);
     display: none;
     font-size: clamp(2rem, 0.5rem + 5vw, 3rem);
 }
@@ -73,15 +79,15 @@ nav {
 .nav-container .lien a {
     font-size: 1.2rem;
     font-weight: 550;
-    color: var(--white-color);
+    color: var(--text-color);
     margin: 0 20px;
     text-decoration: none;
-    transition: color 0.3s linear, text-shadow 0.3s linear;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .nav-container .lien a:hover {
-    color: var(--blue-color);
-    text-shadow: 2px solid var(--blue-color);
+    color: var(--main-color); 
+    text-shadow: 2px solid var(--main-color);
 }
 
 /* Menu déroulant */
@@ -93,22 +99,22 @@ nav {
     height: auto;
     transform: translateY(-500px);
     backdrop-filter: blur(4px) brightness(40%);
-    box-shadow: 0 0 20px var(--black-color);
-    transition: transform 0.2s linear;
+    box-shadow: 0 0 20px var(--background-color);
+    transition: transform 0.2s ease;
 }
 
 .Menu-deroulant .lien {
     display: flex;
     padding: 15px 0;
-    color: var(--white-color);
+    color: var(--text-color);
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: background-color 0.2s linear;
+    transition: background-color 0.2s ease;
 }
 
 .Menu-deroulant .lien a:hover {
-    background-color: var(--blue-color);
+    background-color: var(--main-color); 
 }
 
 /* Conteneur principal */
@@ -118,11 +124,12 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /* Section content */
 .content {
-    color: var(--white-color);
+    color: var(--text-color);
     width: 40%;
     min-height: 100px;
 }
@@ -133,8 +140,8 @@ nav {
 
 .content h1 span {
     font-weight: 700;
-    text-shadow: 0 0 10px var(--blue-color);
-    color: var(--blue-color);
+    text-shadow: 0 0 10px var(--main-color);
+    color: var(--main-color);
 }
 
 .content .typewriter {
@@ -143,8 +150,8 @@ nav {
 }
 
 .typewriter span {
-    color: var(--blue-color);
-    text-shadow: 0 0 10px var(--blue-color);
+    color: var(--main-color); 
+    text-shadow: 0 0 10px var(--main-color);
 }
 
 .content p {
@@ -154,11 +161,11 @@ nav {
 
 /* Boutons pour les réseaux sociaux */
 .reseau-sociaux {
-    color: var(--blue-color);
+    color: var(--accent-color); 
     margin: 0 15px;
     display: inline-flex;
     gap: 10px;
-    transition: transform 0.2s linear, filter 0.2s linear;
+    transition: transform 0.2s ease, filter 0.2s ease;
     font-size: 1.5rem;
     align-items: center;
     justify-content: center;
@@ -171,18 +178,17 @@ nav {
 
 .reseau-sociaux i:hover {
     transform: rotate(360deg) scale(1.3);
-    filter: drop-shadow(0 0 10px var(--blue-color));
-    color: var(--white-color);
+    filter: drop-shadow(0 0 10px var(--main-color));
+    color: var(--accent-color); 
 }
-
 
 /* Animation fluide pour les boutons */
 .content button {
     width: 50%;
     height: 6vh;
     margin: 30px;
-    background-color: var(--blue-color);
-    color: var(--white-color);
+    background-color: var(--main-color);
+    color: var(--text-color);
     border: none;
     outline: none;
     font-size: 120%;
@@ -193,12 +199,9 @@ nav {
 
 .content button:hover {
     transform: scale(1.1);
-    color: var(--white-color);
-    border: 2px solid rgb(0, 0, 220);
-    background-color: transparent;
-    font-weight: 700;
-    box-shadow: 0 0 40px 5px rgb(0, 0, 220);
-    animation: pulse 1.5s infinite;
+    color: var(--text-color);
+    background-color: var(--accent-color); 
+    box-shadow: 0 0 40px 5px var(--accent-color);
 }
 
 /* Image dans le conteneur principal */
@@ -207,7 +210,7 @@ nav {
     height: 80vh;
     border-radius: 100%;
     overflow: hidden;
-    box-shadow: 0 0 50px rgb(0, 0, 220);
+    box-shadow: 0 0 50px var(--main-color); /* Couleur bleue douce */
     z-index: -1;
 }
 
@@ -217,6 +220,112 @@ nav {
 
 .main-container .image img:hover {
     animation: animate 1.5s ease-in-out infinite;
+}
+
+
+h1, h2 {
+    color: var(--main-color); /* Bleu doux pour les titres */
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: var(--text-color);
+}
+
+p {
+    color: var(--text-color); /* Texte gris clair */
+}
+
+/* Liste des projets */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: var(--card-background); /* Fond des cartes */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--light-shadow);
+    width: 30%;
+    transition: transform 0.2s ease;
+}
+
+.project-card h3 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: var(--main-color); /* Bleu doux pour les liens */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+    color: var(--accent-color); /* Vert mint au survol */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+}
+
+/* Media Queries */
+@media (max-width: 884px) {
+    nav .logo {
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .nav-container .lien {
+        display: none;
+    }
+
+    .hamburg {
+        display: block;
+    }
+
+    .main-container .content {
+        width: 80%;
+    }
+
+    .main-container .image {
+        width: 50%;
+        height: 60%;
+    }
+
+    .reseau-sociaux i {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .main-container .image {
+        width: 70%;
+        height: 60%;
+    }
+
+    .main-container .content {
+        width: 80%;
+    }
+
+    .main-container button {
+        margin-top: 15px;
+    }
 }
 
 /* Animation de l'image */
@@ -231,48 +340,7 @@ nav {
         transform: scale(1);
     }
 }
-@media (max-width:884px) {
-    nav .logo{
-        position: absolute;
-        top: 16;
-        left: 15;
-        font-size: 1.5rem;
-    }
-    .main-container{
-        display: flex;
-        flex-direction:column-reverse ;
-    }
-    .nav-container .lien{
-        display: none;
-    }
-    .hamburg{
-        display: block;
-    }
-    .main-container .content{
-        width: 80%;
-    }
-    .main-container .image{
-        width: 50% ;
-        height: 60% ;
-    }
-    .reseau-sociaux  i{
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.5rem ;
-    }
-}
-@media (max-width:440px) {
-    .main-container .image{
-        width: 70%;
-        height: 60%;
-    }
-    .main-container .content{
-        width: 80%;
-    }
-    .main-container button{
-        margin-top: 15px;
-    }
-}
+
 /* Animation pulse pour les boutons */
 @keyframes pulse {
     0% {
@@ -284,72 +352,4 @@ nav {
     100% {
         transform: scale(1);
     }
-}
-
-h1, h2 {
-    color: blue;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-p{
-    color: aliceblue;
-}
-
-.project-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.project-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
-}
-
-.project-card h3 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.project-card a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.project-card a:hover {
-    text-decoration: underline;
-}
-.project-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.project-card {
-    background-color: grey;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
-}
-
-.project-card h3 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.project-card a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.project-card a:hover {
-    text-decoration: underline;
 }
