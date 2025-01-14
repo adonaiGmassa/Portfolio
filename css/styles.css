@@ -326,3 +326,30 @@ p{
 .project-card a:hover {
     text-decoration: underline;
 }
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: grey;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.project-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
