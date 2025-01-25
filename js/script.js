@@ -1,4 +1,4 @@
-//By Radcircles
+/*By Radcircles*/
 
 const txtsTypewrite=[
     " etudiant ",
