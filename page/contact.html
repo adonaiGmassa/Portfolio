@@ -44,6 +44,26 @@
             </div>
         
         </nav>
+        <main>
+
+            <form action="/submit-form" method="post">
+                <label for="nom">Nom :</label><br>
+                <input type="text" id="nom" name="nom" required><br><br>
+
+                <label for="prenom">Nom :</label><br>
+                <input type="text" id="prenom" name="prenom" required><br><br>
+        
+                <label for="email">Email :</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+        
+                <label for="message">Message :</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        
+                <input type="submit" value="Envoyer">
+            </form>
+
+        </main>
+        
         <script src="../js/script.js"></script>
     
     </body>
