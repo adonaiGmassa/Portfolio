@@ -38,9 +38,3 @@ Desktop.ini
 # Git
 .git/
 
-# Image
-*.PNG
-
-# Documents Privée
-docs/
-*.pdf
