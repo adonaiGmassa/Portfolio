@@ -1,0 +1,46 @@
+# Environnements
+.env
+.env.*.local
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs / éditeurs
+.vscode/
+# Logs
+*.log
+
+# Cache divers
+.cache/
+.tmp/
+*.tmp
+
+# Fichiers de production
+*.zip
+*.tar.gz
+
+# Systèmes de bundling
+*.map
+
+# SASS / LESS
+.sass-cache/
+*.css.map
+
+# Déploiement 
+*.swp
+*.bak
+
+# Git
+.git/
+
+# Image
+*.PNG
+
+# Documents Privée
+docs/
+*.pdf
