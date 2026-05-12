@@ -1,86 +1,157 @@
-<!--By Radcircles--><!--By Radcircles-->
+<!--By Radcircles-->
+
 <!DOCTYPE html>
 <html lang="fr">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Contactez Massa Adonaï - Développeur web">
-        
-        <!-- Fonts Google -->
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-        
-        <link href="../css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <title>Contact - Massa Adonaï</title>
-    </head>
-    <body>
-        <!-- Menu de navigation -->
-        <nav>
-            
-            <div class="nav-container">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contacter Massa Adonaï — développeur web à Angers, disponible pour alternance et freelance."/>
+  <title>Contact — Massa Adonaï</title>
+  <link rel="stylesheet" href="../css/global.css"/>
+  <link rel="stylesheet" href="../css/pages.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
 
-                <div class="icon">
-                    <span> Massa Adonaï </span> 
-                </div>
+<nav id="navbar">
+  <a class="nav-logo" href="../index.html">AM<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Accueil</a></li>
+    <li><a href="a-propos.html">À propos</a></li>
+    <li><a href="competences.html">Compétences</a></li>
+    <li><a href="projets.html">Projets</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html" class="nav-cta active">Contact</a></li>
+  </ul>
+  <button class="hamburg" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+</nav>
+<div class="mobile-drawer">
+  <a href="../index.html">Accueil</a>
+  <a href="a-propos.html">À propos</a>
+  <a href="competences.html">Compétences</a>
+  <a href="projets.html">Projets</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html" class="active">Contact</a>
+</div>
 
-                <!-- Liens de navigation vers les différentes pages  -->
-                <div class="lien">
-                    <div class="lien"><a href="../index.html">Accueil</a></div> 
-                    <div class="lien"><a href="aPropos.html">À Propos</a></div> 
-                    <div class="lien"><a href="projet.html">Projets</a></div> 
-                    <div class="lien"><a href="contact.html">Contact</a></div> 
-                </div>
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="page-hero-tag">// 05 — Contact</span>
+      <h1 class="page-hero-title">Travaillons <span class="hl">ensemble</span></h1>
+      <p class="page-hero-sub">Alternance, projet freelance ou simple échange — je suis toujours partant pour en discuter.</p>
+      <div class="page-hero-num">05</div>
+    </div>
+  </div>
+</div>
 
-                <!-- Icône hamburger (menu mobile) -->
-                <i class="fa-solid fa-bars hamburg" onclick="hamburg()" aria-label="Ouvrir le menu"></i> 
-                <!-- Menu déroulant qui apparaît lors du clic sur l'icône hamburger -->
-                <div class="Menu-deroulant">
-                    <div class="lien">
-                        <a href="../index.html">Accueil</a> 
-                        <a href="aPropos.html">À propos</a> 
-                        <a href="projet.html">Projets</a> 
-                        <a href="contact.html">Contact</a> 
-                        <!-- Icône de fermeture du menu  -->
-                        <i class="fa-solid fa-xmark cancel" onclick="ferme()" aria-label="Fermer le menu"></i> 
-                    </div>
-                </div>
-            
+<main class="page-wrap">
+  <div class="container">
+
+    <div class="contact-layout">
+
+      <!-- INFOS -->
+      <div class="contact-info fade-up">
+        <span class="sec-label">// Mes coordonnées</span>
+        <h2 class="sec-title" style="margin-bottom:1.5rem;">Me <span class="hl">joindre</span></h2>
+        <p class="contact-sub">
+          N'hésitez pas à me contacter pour discuter de votre projet, d'une opportunité d'alternance ou simplement pour échanger sur la tech.
+        </p>
+
+        <div class="contact-details">
+          <a class="contact-item" href="https://github.com/adonaiGmassa" target="_blank" rel="noopener">
+            <div class="ci-icon"><i class="fa-brands fa-github"></i></div>
+            <div>
+              <span class="ci-label">GitHub</span>
+              <span class="ci-val">github.com/adonaiGmassa</span>
             </div>
-        
-        </nav>
-        
-        <main>
-
-            <form action="/submit-form" method="post" novalidate>
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom" required aria-required="true">
-
-                <label for="prenom">Prénom :</label>
-                <input type="text" id="prenom" name="prenom" required aria-required="true">
-        
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required aria-required="true">
-        
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Votre message..."></textarea>
-        
-                <input type="submit" value="Envoyer le message">
-            </form>
-            
-            <div class="Message-utilisateur">
-                <p id="confirmationMessage" style="color: green; display: none;">
-                    Merci pour votre message ! Je vous répondrai bientôt.
-                </p>
-                
-                <p id="errorMessage" style="color: red; display: none;">
-                    Veuillez remplir tous les champs correctement.
-                </p>
+          </a>
+          <a class="contact-item" href="https://linkedin.com/in/massa-adona%C3%AF/" target="_blank" rel="noopener">
+            <div class="ci-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div>
+              <span class="ci-label">LinkedIn</span>
+              <span class="ci-val">linkedin.com/in/massa-adonaï</span>
             </div>
-            
-        </main>
-        
-        <script src="../js/script.js"></script>
-    
-    </body>
+          </a>
+          <a class="contact-item" href="mailto:votre-email@example.com">
+            <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <span class="ci-label">Email</span>
+              <span class="ci-val">votre-email@example.com</span>
+            </div>
+          </a>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fa-solid fa-map-marker-alt"></i></div>
+            <div>
+              <span class="ci-label">Localisation</span>
+              <span class="ci-val">Angers, France</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-availability">
+          <span class="avail-dot"></span>
+          Disponible pour une alternance et des projets freelance
+        </div>
+      </div>
+
+      <!-- FORMULAIRE -->
+      <div class="contact-form-wrap fade-up">
+        <span class="sec-label">// Formulaire</span>
+        <h2 class="sec-title" style="margin-bottom:1.5rem;">Envoyer un <span class="hl">message</span></h2>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-nom">Nom <span class="req">*</span></label>
+              <input class="form-input" type="text" id="f-nom" name="nom" placeholder="Votre nom" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-prenom">Prénom <span class="req">*</span></label>
+              <input class="form-input" type="text" id="f-prenom" name="prenom" placeholder="Votre prénom" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-email">Email <span class="req">*</span></label>
+            <input class="form-input" type="email" id="f-email" name="email" placeholder="votre@email.com" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-sujet">Sujet</label>
+            <input class="form-input" type="text" id="f-sujet" name="sujet" placeholder="Alternance, projet freelance, autre..."/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-message">Message <span class="req">*</span></label>
+            <textarea class="form-textarea" id="f-message" name="message" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+          </div>
+          <button class="form-submit" type="submit">
+            Envoyer le message <i class="fa-solid fa-paper-plane" style="margin-left:8px;font-size:12px;"></i>
+          </button>
+          <div class="form-msg success" id="f-ok">
+            <i class="fa-solid fa-circle-check"></i> Merci pour votre message ! Je vous répondrai bientôt.
+          </div>
+          <div class="form-msg error" id="f-err">
+            <i class="fa-solid fa-circle-exclamation"></i> Veuillez remplir tous les champs correctement.
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 <a href="../index.html">Massa Adonaï</a></span>
+  <nav class="footer-links">
+    <a href="../index.html">Accueil</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="projets.html">Projets</a>
+    <a href="services.html">Services</a>
+  </nav>
+  <span>Angers, France</span>
+</footer>
+
+<script src="../js/global.js"></script>
+</body>
 </html>
