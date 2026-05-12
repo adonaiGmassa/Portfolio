@@ -1,105 +1,201 @@
 <!--By Radcircles-->
+
 <!DOCTYPE html>
 <html lang="fr">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Portfolio de Massa Adonaï - Développeur et étudiant en informatique">
-        <meta name="keywords" content="développeur, portfolio, informatique, BTS SIO">
-        <meta name="author" content="Massa Adonaï">
-        
-        <!-- Fonts Google pour une meilleure typographie -->
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-        
-        <link href="css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        
-        <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
-        
-        <title>Massa Adonaï - Portfolio</title>
-    </head>
-    
-    <body>
-        <!-- Menu de navigation -->
-        <nav>
-            
-            <div class="nav-container">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio de Massa Adonaï — Développeur web, mobile et DevOps, basé à Angers."/>
+  <title>Massa Adonaï — Développeur</title>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/home.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
 
-                <div class="icon">
-                    <span> Massa Adonaï </span> 
-                </div>
+<!-- ===== NAV ===== -->
+<nav id="navbar">
+  <a class="nav-logo" href="index.html">AM<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Accueil</a></li>
+    <li><a href="pages/a-propos.html">À propos</a></li>
+    <li><a href="pages/competences.html">Compétences</a></li>
+    <li><a href="pages/projets.html">Projets</a></li>
+    <li><a href="pages/services.html">Services</a></li>
+    <li><a href="pages/contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <button class="hamburg" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+</nav>
+<div class="mobile-drawer">
+  <a href="index.html" class="active">Accueil</a>
+  <a href="pages/a-propos.html">À propos</a>
+  <a href="pages/competences.html">Compétences</a>
+  <a href="pages/projets.html">Projets</a>
+  <a href="pages/services.html">Services</a>
+  <a href="pages/contact.html">Contact</a>
+</div>
 
-                <!-- Liens de navigation vers les differenets pages  -->
-                <div class="lien">
-                    <div class="lien"><a href="index.html">Accueil</a></div> 
-                    <div class="lien"><a href="page/aPropos.html">À Propos</a></div> 
-                    <div class="lien"><a href="page/projet.html">Projets</a></div> 
-                    <div class="lien"><a href="page/contact.html">Contact</a></div> 
-                </div>
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="container">
+    <div class="hero-grid">
 
-                <!-- Icône hamburger (menu mobile) -->
-                <i class="fa-solid fa-bars hamburg" onclick="hamburg()" aria-label="Ouvrir le menu"></i> 
-                <!-- Menu déroulant qui apparaît lors du clic sur l'icône hamburger -->
-                <div class="Menu-deroulant">
-                    <div class="lien">
-                        <a href="index.html">Accueil</a> 
-                        <a href="page/aPropos.html">À propos</a> 
-                        <a href="page/projet.html">Projets</a> 
-                        <a href="page/contact.html">Contact</a> 
-                        <!-- Icône de fermeture du menu  -->
-                        <i class="fa-solid fa-xmark cancel" onclick="ferme()" aria-label="Fermer le menu"></i> 
-                    </div>
-                </div>
-            
-            </div>
-        
-        </nav>
-        
-        <!-- Section principale -->
-        <section>
-            <div class="main-container">
-                <!-- Conteneur principal du contenu -->
-                <div class="content">
-                    <!--Texte avec animation-->
-                    <h1>
-                        Je suis <span>Massa Adonaï</span>
-                    </h1>
-                    <div class="typewriter">
-                        Je suis un <!-- Texte statique -->
-                        <!-- Texte avec animation -->
-                        <span class="typewriter-text">développeur</span> <!-- Ce span va afficher le texte "tapé" progressivement -->
-                    </div>
-                    <p>Étudiant en BTS SIO, passionné par le développement et l'innovation technologique. 
-                       </p>
-                    
-                    <div class="reseau-sociaux">
-                        <a href="https://github.com/adonaiGmassa" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/massa-adonaï/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:votre-email@example.com" aria-label="Email">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>                    
-                    </div>
-                    <div class="btn">
-                        <a href="docs/CvStage.pdf" download>
-                            <button type="button">Télécharger mon CV</button>
-                        </a>
-                    </div>
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="tag-dot"></span>
+          Disponible · Alternance &amp; Freelance
+        </div>
+        <h1 class="hero-name">
+          Je suis<br/>
+          <span class="hl">Massa Adonaï</span>
+        </h1>
+        <div class="typewriter-wrap">
+          Je suis un <span class="tw-cursor" id="tw"></span>
+        </div>
+        <p class="hero-bio">
+          Étudiant en BTS SIO, passionné par le développement et l'innovation technologique.
+          Je construis des applications web, mobiles et des infrastructures cloud depuis Angers.
+        </p>
+        <div class="hero-socials">
+          <a class="social-link" href="https://github.com/adonaiGmassa" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a class="social-link" href="https://linkedin.com/in/massa-adona%C3%AF/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="hero-actions">
+          <a class="btn-primary" href="docs/CvStage.pdf" download>
+            <i class="fa-solid fa-download" style="margin-right:6px;font-size:10px;"></i>Télécharger mon CV
+          </a>
+          <a class="btn-outline" href="pages/projets.html">Voir mes projets</a>
+        </div>
+      </div>
 
-                </div>
-                <div class="image">
-                    <img src="img/profil.PNG" alt="Photo de profil de Massa Adonaï">
-                </div>
-            </div>
-        </section>
-        
-        <script src="js/script.js"></script>
-    
-    </body>
-    
+      <div class="hero-right">
+        <div class="avatar-wrap">
+          <div class="avatar-ring">
+            <div class="avatar-inner">AM</div>
+          </div>
+          <div class="avatar-badge">// Angers, France</div>
+        </div>
+        <!--
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-num">3</span>
+            <span class="stat-lbl">Stages</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">5+</span>
+            <span class="stat-lbl">Projets</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">9+</span>
+            <span class="stat-lbl">Technologies</span>
+          </div>
+        </div>
+        -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="m-dot"></span>HTML &amp; CSS</div>
+    <div class="marquee-item"><span class="m-dot"></span>JavaScript</div>
+    <div class="marquee-item"><span class="m-dot"></span>PHP / Laravel</div>
+    <div class="marquee-item"><span class="m-dot"></span>C# .NET</div>
+    <div class="marquee-item"><span class="m-dot"></span>Flutter</div>
+    <div class="marquee-item"><span class="m-dot"></span>Python</div>
+    <div class="marquee-item"><span class="m-dot"></span>MySQL</div>
+    <div class="marquee-item"><span class="m-dot"></span>Docker</div>
+    <div class="marquee-item"><span class="m-dot"></span>Linux</div>
+    <div class="marquee-item"><span class="m-dot"></span>Git</div>
+    <div class="marquee-item"><span class="m-dot"></span>WordPress</div>
+    <div class="marquee-item"><span class="m-dot"></span>Tailwind CSS</div>
+    <!-- loop -->
+    <div class="marquee-item"><span class="m-dot"></span>HTML &amp; CSS</div>
+    <div class="marquee-item"><span class="m-dot"></span>JavaScript</div>
+    <div class="marquee-item"><span class="m-dot"></span>PHP / Laravel</div>
+    <div class="marquee-item"><span class="m-dot"></span>C# .NET</div>
+    <div class="marquee-item"><span class="m-dot"></span>Flutter</div>
+    <div class="marquee-item"><span class="m-dot"></span>Python</div>
+    <div class="marquee-item"><span class="m-dot"></span>MySQL</div>
+    <div class="marquee-item"><span class="m-dot"></span>Docker</div>
+    <div class="marquee-item"><span class="m-dot"></span>Linux</div>
+    <div class="marquee-item"><span class="m-dot"></span>Git</div>
+    <div class="marquee-item"><span class="m-dot"></span>WordPress</div>
+    <div class="marquee-item"><span class="m-dot"></span>Tailwind CSS</div>
+  </div>
+</div>
+
+<!-- ===== APERÇU RAPIDE ===== -->
+<section class="overview">
+  <div class="container">
+    <div class="overview-grid">
+
+      <a class="ov-card fade-up" href="pages/a-propos.html">
+        <span class="ov-num">01</span>
+        <div class="ov-icon"><i class="fa-solid fa-user"></i></div>
+        <h3>À propos</h3>
+        <p>Mon parcours, ma formation et ce qui me motive au quotidien.</p>
+        <span class="ov-arrow">→</span>
+      </a>
+
+      <a class="ov-card fade-up" href="pages/competences.html">
+        <span class="ov-num">02</span>
+        <div class="ov-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Compétences</h3>
+        <p>Les langages, frameworks et outils que je maîtrise.</p>
+        <span class="ov-arrow">→</span>
+      </a>
+
+      <a class="ov-card fade-up" href="pages/projets.html">
+        <span class="ov-num">03</span>
+        <div class="ov-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h3>Projets</h3>
+        <p>Mes réalisations concrètes, du hackathon au stage.</p>
+        <span class="ov-arrow">→</span>
+      </a>
+
+      <a class="ov-card fade-up" href="pages/services.html">
+        <span class="ov-num">04</span>
+        <div class="ov-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>Services</h3>
+        <p>Ce que je propose : web, API, mobile, DevOps &amp; CMS.</p>
+        <span class="ov-arrow">→</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BANDE ===== -->
+<div class="cta-band">
+  <div class="container cta-inner">
+    <p>Vous avez un projet en tête ?</p>
+    <a class="btn-primary" href="pages/contact.html">Discutons ensemble →</a>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <span>© 2026 <a href="index.html">Massa Adonaï</a></span>
+  <nav class="footer-links">
+    <a href="pages/a-propos.html">À propos</a>
+    <a href="pages/projets.html">Projets</a>
+    <a href="pages/services.html">Services</a>
+    <a href="pages/contact.html">Contact</a>
+  </nav>
+  <span>Angers, France</span>
+</footer>
+
+<script src="js/global.js"></script>
+</body>
 </html>
